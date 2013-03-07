@@ -1,0 +1,16 @@
+﻿@using NuGet.Server.Infrastructure.Lucene
+@model IndexingStatus
+
+<p>Indexer status: @Model.State</p>
+@if(Model.PackagesToIndex > 0)
+{
+    <p>Indexing @Model.CompletedPackages of @Model.PackagesToIndex new packages.</p>
+    if(Model.CurrentPackagePath != null)
+    {
+      <p>Current package: @Model.CurrentPackagePath</p>   
+    }
+}
+<p>Total Packages: @Model.TotalPackages</p>
+<p>Pending Deletes: @Model.PendingDeletes</p>
+<p>Optimized: @(Model.IsOptimized ? "Yes" : "No")</p>
+<p>Index Last Modified: @Model.LastModification.ToString("r")</p>

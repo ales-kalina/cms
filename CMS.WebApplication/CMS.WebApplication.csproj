@@ -1,0 +1,314 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{34627BE3-9478-4E8A-B61F-472C2DFF3FC9}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CMS.WebApplication</RootNamespace>
+    <AssemblyName>CMS.WebApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">.\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>CMS.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=e3c8489efbe4f751, processorArchitecture=MSIL">
+      <HintPath>packages\CMS.Core.1.1.14\lib\net40\CMS.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Ninject, Version=3.0.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>packages\CMS.Core.1.1.14\lib\net40\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog">
+      <HintPath>packages\NLog.2.0.0.2000\lib\net40\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="NuGet.Core, Version=2.2.31210.9045, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Nuget.Core.2.2.0\lib\net40-Client\NuGet.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-responsive.css" />
+    <Content Include="Content\bootstrap-responsive.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\images\glyphicons-halflings-white.png" />
+    <Content Include="Content\images\glyphicons-halflings.png" />
+    <Content Include="Modules\CMS.WebApplication\Controls\LocalPackageUpdateList.ascx" />
+    <Content Include="Modules\CMS.WebApplication\Controls\LocalPackageUpdateListItem.ascx" />
+    <Content Include="Modules\CMS.WebApplication\Controls\LocalPackageList.ascx" />
+    <Content Include="Modules\CMS.WebApplication\Controls\LocalPackageListItem.ascx" />
+    <Content Include="Modules\CMS.WebApplication\Controls\Menu.ascx" />
+    <Content Include="Modules\CMS.WebApplication\Controls\PackageDetails.ascx" />
+    <Content Include="Modules\CMS.WebApplication\Controls\PackageManagerMessageList.ascx" />
+    <Content Include="Modules\CMS.WebApplication\Controls\PackageSearchForm.ascx" />
+    <Content Include="Modules\CMS.WebApplication\Controls\SourcePackageList.ascx" />
+    <Content Include="Modules\CMS.WebApplication\Controls\SourcePackageListItem.ascx" />
+    <Content Include="Modules\CMS.WebApplication\Pages\UpdateLocalPackage.aspx" />
+    <Content Include="Modules\CMS.WebApplication\Pages\Default.aspx" />
+    <Content Include="Modules\CMS.WebApplication\Pages\InstallSourcePackage.aspx" />
+    <Content Include="Modules\CMS.WebApplication\Pages\LocalPackage.aspx" />
+    <Content Include="Modules\CMS.WebApplication\Pages\LocalPackages.aspx" />
+    <Content Include="Modules\CMS.WebApplication\Pages\LocalPackageUpdates.aspx" />
+    <Content Include="Modules\CMS.WebApplication\Pages\RemoveLocalPackage.aspx" />
+    <Content Include="Modules\CMS.WebApplication\Pages\SourcePackage.aspx" />
+    <Content Include="Modules\CMS.WebApplication\Pages\SourcePackages.aspx" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-1.9.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Module.cs" />
+    <Compile Include="Modules\CMS.WebApplication\Code\ILocalPackageModelProvider.cs" />
+    <Compile Include="Modules\CMS.WebApplication\Code\ISourcePackageModelProvider.cs" />
+    <Compile Include="Modules\CMS.WebApplication\Code\SourcePackageModelProvider.cs" />
+    <Compile Include="Modules\CMS.WebApplication\Code\IMenuManager.cs" />
+    <Compile Include="Modules\CMS.WebApplication\Code\LocalPackageModelProvider.cs" />
+    <Compile Include="Modules\CMS.WebApplication\Code\MenuItem.cs" />
+    <Compile Include="Modules\CMS.WebApplication\Code\MenuItemGroup.cs" />
+    <Compile Include="Modules\CMS.WebApplication\Code\MenuManager.cs" />
+    <Compile Include="Modules\CMS.WebApplication\Code\RouteCollectionExtensions.cs" />
+    <Compile Include="Modules\CMS.WebApplication\Code\WebApplicationBootstrapper.cs" />
+    <Compile Include="Modules\CMS.WebApplication\Code\WebApplicationFileSystem.cs" />
+    <Compile Include="Modules\CMS.WebApplication\Code\WebApplicationManager.cs" />
+    <Compile Include="Modules\CMS.WebApplication\Controls\LocalPackageUpdateList.ascx.cs">
+      <DependentUpon>LocalPackageUpdateList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\CMS.WebApplication\Controls\LocalPackageUpdateList.ascx.designer.cs">
+      <DependentUpon>LocalPackageUpdateList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\CMS.WebApplication\Controls\LocalPackageUpdateListItem.ascx.cs">
+      <DependentUpon>LocalPackageUpdateListItem.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\CMS.WebApplication\Controls\LocalPackageUpdateListItem.ascx.designer.cs">
+      <DependentUpon>LocalPackageUpdateListItem.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\CMS.WebApplication\Controls\LocalPackageList.ascx.cs">
+      <DependentUpon>LocalPackageList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\CMS.WebApplication\Controls\LocalPackageList.ascx.designer.cs">
+      <DependentUpon>LocalPackageList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\CMS.WebApplication\Controls\LocalPackageListItem.ascx.cs">
+      <DependentUpon>LocalPackageListItem.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\CMS.WebApplication\Controls\LocalPackageListItem.ascx.designer.cs">
+      <DependentUpon>LocalPackageListItem.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\CMS.WebApplication\Controls\Menu.ascx.cs">
+      <DependentUpon>Menu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\CMS.WebApplication\Controls\Menu.ascx.designer.cs">
+      <DependentUpon>Menu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\CMS.WebApplication\Controls\PackageDetails.ascx.cs">
+      <DependentUpon>PackageDetails.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\CMS.WebApplication\Controls\PackageDetails.ascx.designer.cs">
+      <DependentUpon>PackageDetails.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\CMS.WebApplication\Controls\PackageManagerMessageList.ascx.cs">
+      <DependentUpon>PackageManagerMessageList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\CMS.WebApplication\Controls\PackageManagerMessageList.ascx.designer.cs">
+      <DependentUpon>PackageManagerMessageList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\CMS.WebApplication\Controls\PackageSearchForm.ascx.cs">
+      <DependentUpon>PackageSearchForm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\CMS.WebApplication\Controls\PackageSearchForm.ascx.designer.cs">
+      <DependentUpon>PackageSearchForm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\CMS.WebApplication\Controls\SourcePackageList.ascx.cs">
+      <DependentUpon>SourcePackageList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\CMS.WebApplication\Controls\SourcePackageList.ascx.designer.cs">
+      <DependentUpon>SourcePackageList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\CMS.WebApplication\Controls\SourcePackageListItem.ascx.cs">
+      <DependentUpon>SourcePackageListItem.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\CMS.WebApplication\Controls\SourcePackageListItem.ascx.designer.cs">
+      <DependentUpon>SourcePackageListItem.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\CMS.WebApplication\MasterPages\Main.Master.cs">
+      <DependentUpon>Main.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\CMS.WebApplication\MasterPages\Main.Master.designer.cs">
+      <DependentUpon>Main.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\CMS.WebApplication\Models\LocalPackageUpdateModel.cs" />
+    <Compile Include="Modules\CMS.WebApplication\Models\LocalPackageModel.cs" />
+    <Compile Include="Modules\CMS.WebApplication\Models\SourcePackageModel.cs" />
+    <Compile Include="Modules\CMS.WebApplication\Pages\UpdateLocalPackage.aspx.cs">
+      <DependentUpon>UpdateLocalPackage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\CMS.WebApplication\Pages\UpdateLocalPackage.aspx.designer.cs">
+      <DependentUpon>UpdateLocalPackage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\CMS.WebApplication\Pages\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\CMS.WebApplication\Pages\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\CMS.WebApplication\Pages\InstallSourcePackage.aspx.cs">
+      <DependentUpon>InstallSourcePackage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\CMS.WebApplication\Pages\InstallSourcePackage.aspx.designer.cs">
+      <DependentUpon>InstallSourcePackage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\CMS.WebApplication\Pages\LocalPackage.aspx.cs">
+      <DependentUpon>LocalPackage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\CMS.WebApplication\Pages\LocalPackage.aspx.designer.cs">
+      <DependentUpon>LocalPackage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\CMS.WebApplication\Pages\LocalPackages.aspx.cs">
+      <DependentUpon>LocalPackages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\CMS.WebApplication\Pages\LocalPackages.aspx.designer.cs">
+      <DependentUpon>LocalPackages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\CMS.WebApplication\Pages\LocalPackageUpdates.aspx.cs">
+      <DependentUpon>LocalPackageUpdates.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\CMS.WebApplication\Pages\LocalPackageUpdates.aspx.designer.cs">
+      <DependentUpon>LocalPackageUpdates.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\CMS.WebApplication\Pages\RemoveLocalPackage.aspx.cs">
+      <DependentUpon>RemoveLocalPackage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\CMS.WebApplication\Pages\RemoveLocalPackage.aspx.designer.cs">
+      <DependentUpon>RemoveLocalPackage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\CMS.WebApplication\Pages\SourcePackage.aspx.cs">
+      <DependentUpon>SourcePackage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\CMS.WebApplication\Pages\SourcePackage.aspx.designer.cs">
+      <DependentUpon>SourcePackage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\CMS.WebApplication\Pages\SourcePackages.aspx.cs">
+      <DependentUpon>SourcePackages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\CMS.WebApplication\Pages\SourcePackages.aspx.designer.cs">
+      <DependentUpon>SourcePackages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Modules\CMS.WebApplication\MasterPages\Main.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CMS.snk" />
+    <Content Include="NLog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Scripts\jquery-1.9.1.min.map" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49938</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/CMS.WebApplication</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

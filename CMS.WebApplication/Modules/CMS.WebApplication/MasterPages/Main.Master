@@ -1,0 +1,32 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="CMS.WebApplication.MasterPages.Main" %>
+<%@ Register src="~/Modules/CMS.WebApplication/Controls/Menu.ascx" tagname="Menu" tagprefix="custom" %>
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title>Modular application platform demo</title>
+    <asp:ContentPlaceHolder ID="ContentPlaceHolderHead" runat="server"></asp:ContentPlaceHolder>
+    <link runat="server" href="~/Content/bootstrap.css" rel="stylesheet" media="screen" type="text/css" />
+    <style type="text/css" media="screen">
+        html {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <form id="FormMain" runat="server">
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span2">
+                    <custom:Menu runat="server" />
+                </div>
+                <div class="span10">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolderMain" runat="server"></asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </div>
+        <script src='<%= Page.ResolveUrl("~/Scripts/jquery-1.8.3.js") %>' type="text/javascript"></script>
+        <script src='<%= Page.ResolveUrl("~/Scripts/bootstrap.js") %>' type="text/javascript"></script>
+    </form>
+</body>
+</html>
